@@ -40,7 +40,8 @@ export async function pack(images: PackingItem[], option?: PackingOption): Promi
   const outPut: PackingOutput = {
     code: ErrorCode.Success,
     msg: "打包成功！",
-    info: {}
+    format: 1,
+    atlasItems: []
   };
   const context = { option, images, outPut };
   for (let i = 0; i < packingPipe.length; i++) {
